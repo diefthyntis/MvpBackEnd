@@ -8,4 +8,6 @@ public class ArticleRequest {
 	private String speakerid;
 	private String topicid;
 	private String title;
+	private String creationdate;
+	private String modificationdate;
 }
