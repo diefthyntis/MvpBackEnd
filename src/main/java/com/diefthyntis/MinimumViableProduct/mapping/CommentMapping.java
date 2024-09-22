@@ -49,8 +49,8 @@ public class CommentMapping {
 	 */
 	public CommentResponse mapCommentToCommentResponse(Comment comment) {
 		final CommentResponse commentResponse = new CommentResponse();
-		commentResponse.setArticleId(NumberUtils.convertToString(comment.getArticle().getId()));
-		commentResponse.setSpeakerId(NumberUtils.convertToString(comment.getSpeaker().getId()));
+		commentResponse.setArticleid(NumberUtils.convertToString(comment.getArticle().getId()));
+		commentResponse.setSpeakerid(NumberUtils.convertToString(comment.getSpeaker().getId()));
 		commentResponse.setId(NumberUtils.convertToString(comment.getId()));
 		commentResponse.setCreationdate(DateUtils.convertLocalDateToString(comment.getCreationdate()));
 		commentResponse.setModificationdate(DateUtils.convertLocalDateToString(comment.getModificationdate()));

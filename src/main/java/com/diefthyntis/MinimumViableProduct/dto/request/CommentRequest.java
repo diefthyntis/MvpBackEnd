@@ -7,4 +7,5 @@ public class CommentRequest {
 	private String sentence;
 	private String speakerid;
 	private String articleid;
+	private String creationdate;
 }

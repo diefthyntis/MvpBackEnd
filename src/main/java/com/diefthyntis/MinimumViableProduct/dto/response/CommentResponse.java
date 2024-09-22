@@ -10,8 +10,8 @@ import lombok.Data;
 public class CommentResponse {
 	private String id;
 	private String sentence;
-    private String speakerId;
-    private String articleId;
+    private String speakerid;
+    private String articleid;
     private String creationdate;
 	private String modificationdate;
     
