@@ -11,6 +11,7 @@ import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -102,5 +103,17 @@ public class ArticleController {
 		
 		
 	}
+	
+	@ResponseStatus(HttpStatus.OK)
+	@GetMapping("/article/{id}")
+	public ResponseEntity<Article> getArticleById(@PathVariable String id) {
+		int tmpId = Integer.parseInt(id);
+        Article article = articleService.getArticleById(tmpId);
+        if (article != null) {
+            return new ResponseEntity<>(article, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 	
 }

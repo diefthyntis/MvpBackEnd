@@ -57,7 +57,7 @@ public class SubscriptionController {
 	private final SubscriptionMapping subscriptionMapping;
 	private final SpeakerService speakerService;
 	
-	@PostMapping("/subscriptions")
+	@PostMapping("/newSubscription")
     public ResponseEntity<ServerResponse> create(final @RequestBody SubscriptionRequest subscriptionRequest) throws IOException, java.io.IOException {
 		log.info("début de la création de l'abonnement");
 			
@@ -73,7 +73,7 @@ public class SubscriptionController {
       
     }
 	
-	@GetMapping("/subscriptions")
+	@GetMapping("/subscriptionListBySpeakerId")
 	public List<SubscriptionResponse> getSubscriptions (final Principal principal) {
 		final String emailAddress = principal.getName();
 		final Speaker speaker = speakerService.findByEmailaddress(emailAddress);

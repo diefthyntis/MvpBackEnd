@@ -49,7 +49,7 @@ public class SubscriptionMapping {
 		subscriptionResponse.setCreationdate(DateUtils.convertLocalDateToString(subscription.getCreationdate()));
 		subscriptionResponse.setModificationdate(DateUtils.convertLocalDateToString(subscription.getModificationdate()));
 		subscriptionResponse.setSpeakerid(NumberUtils.convertToString(subscription.getSpeaker().getId()));
-		subscriptionResponse.setTopicId(NumberUtils.convertToString(subscription.getTopic().getId()));
+		subscriptionResponse.setTopicid(NumberUtils.convertToString(subscription.getTopic().getId()));
 		return subscriptionResponse;
 		
 	}

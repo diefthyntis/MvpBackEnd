@@ -28,8 +28,8 @@ private final ArticleRepository articleRepository;
 		articleRepository.save(article);
 	}
 	
-	public Article getArticleById(Integer articleId) {
-		return articleRepository.findById(articleId).orElseThrow(() -> new ArticleNotFoundException("Article Not Found"));
+	public Article getArticleById(Integer id) {
+		return articleRepository.findById(id).orElseThrow(() -> new ArticleNotFoundException("Article Not Found"));
 	}
 	
 

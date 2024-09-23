@@ -6,4 +6,5 @@ import lombok.Data;
 public class SubscriptionRequest {
 	private String speakerid;
 	private String topicid;
+	private String creationdate;
 }
